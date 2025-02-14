@@ -16,8 +16,8 @@ c.DummyAuthenticator.password = "jupyterhub123"
 
 # Spawner 配置
 c.JupyterHub.spawner_class = 'jupyterhub.spawner.LocalProcessSpawner'
-c.Spawner.notebook_dir = '/home/ecs-user/jupyterhub'  # 先设置一个基础目录
-c.Spawner.default_url = '/lab'
+c.Spawner.notebook_dir = '~'  # 先设置一个基础目录
+c.Spawner.default_url = '/tree'
 
 # 用户配置
 c.Authenticator.admin_users = {'admin'}
@@ -66,3 +66,7 @@ c.Spawner.env = {
     'JUPYTER_PATH': '/home/ecs-user/jupyterhub/venv/share/jupyter',
     'JUPYTER_RUNTIME_DIR': '/tmp/jupyter-runtime'
 } 
+
+c.JupyterHub.ServerApp.tornado_settings = {                                                                                                                                                                                                  
+        "headers":{"Content-Security-Policy": "frame-ancestors 'self' "}
+}

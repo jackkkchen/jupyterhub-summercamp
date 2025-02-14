@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 激活虚拟环境
-source ~/jupyterhub/venv/bin/activate
+c
 
 # 确保环境变量正确
 export PATH="$HOME/jupyterhub/venv/bin:$PATH"
