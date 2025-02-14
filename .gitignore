@@ -1,0 +1,25 @@
+# JupyterHub runtime files
+jupyterhub_cookie_secret
+proxy_auth_token
+jupyterhub.sqlite
+jupyterhub_config.json
+nbgrader.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Runtime data
+*.pid
+*.log
+
+# Environment variables
+.env
